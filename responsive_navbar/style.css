@@ -1,0 +1,104 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: montserrat;
+}
+
+nav{
+	background: #CD5520;
+	width: 100%;
+	height: 80px;
+}
+
+label.logo{
+	font-size: 35px;
+	color: #000;
+	line-height: 80px;
+	font-weight: bold;
+	margin: 0 100px;
+	text-transform: uppercase;
+}
+nav ul{
+	float: right;
+	margin-right: 60px;
+
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px; 
+}
+nav ul li a{
+	color: #000;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	transition: .5s;
+}
+
+a.active, a:hover{
+	background-color: #B13D24;
+}
+#check{
+	display: none;
+}
+.checkbtn {
+	font-size: 35px;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	display: none;
+	cursor: pointer;
+	
+	}
+
+	@media (max-width: 950px){
+		label.logo{
+			font-size: 30px;
+			margin-left: 70px;
+		}
+		nav ul li a{
+			font-size: 16px;
+		}
+	}
+@media (max-width: 825px){
+	nav ul{
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		background-color:  rgba(1, 1, 1,.9);
+		width: 100%;
+		height: 100vh;
+		text-align: center;
+		transition: .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 10px 0;
+	}
+	nav ul li a{
+		color: #CD5520;
+	}
+	a.active, a:hover{
+		background:  none;
+		color: #B13D24;
+	}
+	.checkbtn{
+		display: block;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+}
+section{
+	background: url(practice9.jpg) no-repeat;
+	background-size: cover;
+	height: calc(100vh - 80px);
+}
